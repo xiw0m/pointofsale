@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>TUSOK</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="javascript" href="script.js">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSXlkzUMsblQ2yLZDfc3IWVIGjVJK/vfeQjYmD7IkvcuN+lRUyxtj/zYLjgyWi" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ <!--LOGO-->
+ <div class="header-logo" id="head_logo">
+  <a href="index.html" class="logo"><img src="tusok_logo.png" alt=""></a>
+</div>
+<!--END OF LOGO-->
+
+</head>
+<body>
+    <div class="products" >
+      <h2>THE MENU</h2>
+    </div>
+<!-- BOOTSTRAP CARD FOR MENU-->
+    <div class="container">
+      <div class="row">
+        <div class="p-2" style="background: url('burger_bg.png');background-size: contain;">
+          <img src="burger.png" alt="" style="border-radius: 100px 100px 100px 100px; box-shadow: 4px 4px 4px 4px rgba(114, 112, 12, 0.4); ">
+          <div class="txt_bg">
+          <h2>BURGER</h2>
+          <p>Php 60.00</p>
+        </div>
+        </div>
+        <div class="p-2" style="background: url('fries_bg.png');background-size: contain;">
+          <img src="fries.png" alt="" style="border-radius: 100px 100px 100px 100px; box-shadow: 4px 4px 4px 4px rgba(12, 65, 114, 0.4); ">
+          <div class="txt_bg">
+          <h2>FRIES</h2>
+          <p>Php 50.00</p>
+        </div>
+        </div>
+      </div>
+        <div class="row">
+        <div class="p-2" style="background: url('fishbol_bg.png');background-size: contain;">
+          <img src="fishbol.png" alt="" style="border-radius: 100px 100px 100px 100px; box-shadow: 4px 4px 4px 4px rgba(114, 12, 12, 0.4); ">
+          <div class="txt_bg">
+          <h2>FISHBOL</h2>        
+          <p>Php 20.00</p>
+        </div>
+        </div>
+        <div class="p-2" style="background: url('kikiam_bg.png');background-size: contain;">
+          <img src="kikiam.png" alt="" style="border-radius: 100px 100px 100px 100px; box-shadow: 4px 4px 4px 4px rgba(12, 114, 34, 0.4); ">
+          <div class="txt_bg">
+          <h2>KIKIAM</h2>        
+          <p>Php 25.00</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- PLACING FIRST ORDER -->
+<div class="containerOrder">
+<div class="order">
+  <button id="btnplaceOrder" type="submit">Place an Order</button>
+  <div id="placeOrder" style="display: none;">
+    <h2>Placing an Order</h2>
+    <select id="product1">
+      <option value="No Order">NA</option>
+      <option value="burger">Burger - ₱60.00</option>
+      <option value="fries">Fries - ₱50.00</option>
+      <option value="fishbol">Fishbol - ₱20.00</option>
+      <option value="kikiam">Kikiam - ₱25.00</option>
+  </select>
+  <input type="number" id="quantity1" value="0">
+  </div>
+<!-- END OF PLACING FIRST ORDER -->
+
+<!-- PLACING EXTRA ORDER -->
+  <button id="btnxtraOrder" type="submit" style="display: none;">Add Extra Order</button>
+  <div id="xtraOrder" style="display: none;">
+    <select id="product2">
+      <option value="No Order">NA</option>
+      <option value="burger">Burger - ₱60.00</option>
+      <option value="fries">Fries - ₱50.00</option>
+      <option value="fishbol">Fishbol - ₱20.00</option>
+      <option value="kikiam">Kikiam - ₱25.00</option>
+  </select>
+  <input type="number" id="quantity2" value="0">
+  </div>
+  <button id="btncheckoutOrder" type="submit" style="display: none;" onclick="calculateTotal()">Checkout</button>
+</div>
+<button id="btnclearOrder" type="submit" style="display: none;">
+  <a class="cancelOrder" href="index.html" style="color: white;">Clear Order</a>
+</button>
+</div>
+<!-- END OF PLACING EXTRA ORDER -->
+
+<!-- ORDER SUMMARY -->
+ <div id="orderSummary" class="summary" style="display: none;">
+   <h2>Order Summary</h2>
+   <div id="orderBreakdown1"></div> <p id="totalDisplay1">Total: ₱0.00</p>
+   <div id="orderBreakdown2"></div> <p id="totalDisplay2">Total: ₱0.00</p>
+   <p id="grandTotalDisplay">Grand Total: ₱0.00</p>
+   <button id="btnpayment" type="submit" style="display: none;">Proceed to Payment</button>
+ </div>
+  <!-- END OF ORDER SUMMARY -->
+  
+  <!-- PAYMENT -->
+ <div id="payment" style="display: none;">
+   <h2>Payment</h2>
+   <p id="cash">Cash:</p>
+   <input type="number" id="cashInput" placeholder="Enter Cash Amount"> <br>
+   <button id="btnprocesspay" onclick="calculatePayment()">Process Payment</button>
+   <div id="change" style="display: none;">
+   <br>
+   <p id="paymentDisplay">Payment: ₱0.00</p>
+   <p id="changeDisplay">Change: ₱0.00</p>
+ </div>
+ <!-- END OF PAYMENT -->
+
+ <script src="script.js"></script>
+</body>
+</html>
+
+

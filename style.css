@@ -1,0 +1,169 @@
+h1,
+h2,
+p {
+    font-family: Herculanum Pro Roman;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+body {
+    background: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-logo {
+    background: url('header_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 50vh;
+    border-color: #ff9e4e;
+    border: 10px;
+}
+
+.payment button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.header-logo {
+    display: block;
+    text-align: center;
+}
+
+.p-2 {
+    text-align: center;
+    box-shadow: 1px 1px 3px 3px rgba(20, 20, 20, 0.4);
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 373px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+div.txt_bg:hover {
+    margin: 30px;
+    background: url('bg.jpg');
+    padding-bottom: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(49, 49, 49, 0.4);
+    transition: 0.3s ease;
+}
+
+div.p-2:hover {
+    box-shadow: 5px 5px 5px 5px rgba(49, 49, 49, 0.4);
+    transition: 0.3s ease;
+}
+
+.container {
+    border: #8f7f39;
+    border-style: solid;
+    padding: 50px;
+
+}
+
+div.h2,
+div.p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+
+.header {
+    padding: 10px 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+.cashInput {
+    align-items: center;
+}
+
+.containerOrder,
+.summary {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#payment {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+#payment p,
+#payment input,
+#payment button {
+    margin-bottom: 10px;
+}
+
+.order button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#placeOrder,
+#xtraOrder {
+    display: none;
+    transition: all 0.3s ease-in-out;
+    padding: 15px;
+    border-radius: 5px
+}
+
+#btnplaceOrder,
+#btnxtraOrder,
+#btncheckoutOrder,
+#btnpayment,
+#btnprocesspay {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+#btnplaceOrder:hover,
+#btnxtraOrder:hover,
+#btncheckoutOrder:hover,
+#btnpayment:hover,
+#btnprocesspay:hover {
+    background: url('bg.jpg');
+    box-shadow: 5px 5px 5px 5px rgba(35, 80, 34, 0.4);
+    color: #4CAF50;
+}
+
+#btnclearOrder {
+    background-color: #923838;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+#btnclearOrder:hover {
+    background-color: #ff0000;
+    box-shadow: 5px 5px 5px 5px rgba(35, 80, 34, 0.4);
+}
